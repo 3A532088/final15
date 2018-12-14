@@ -68,8 +68,8 @@
                                     <li data-toggle="collapse" data-target="#clothing">
                                         <a href="#">滯塵能力</a>
                                         <ul class="sub-menu collapse show" id="clothing">
-                                            <li><a href="#">高</a></li>
-                                            <li><a href="#">低</a></li>
+                                            <li><a href="{{route('dustup.shop')}}">高</a></li>
+                                            <li><a href="{{route('dustdown.shop')}}">低</a></li>
                                         </ul>
                                     </li>
 

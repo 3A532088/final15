@@ -19,6 +19,8 @@ class ShopController extends Controller
         $data = Good::all();
         return view('Shop', ['goods' => $data]);
     }
+
+    //淨化力
     public function cleanup()
     {
 
@@ -37,8 +39,28 @@ class ShopController extends Controller
         ->where('cleanup','<',6)
         ->get();
         return view('Shop', ['goods' => $data]);
-        
     }
+
+    //滯塵能力
+    public function dustup()
+    {
+        $data = DB::table('goods')
+        ->join('plants', 'goods.id', '=', 'plants.goods_id')
+        ->where('dust','>',5)
+        ->get();
+        return view('Shop', ['goods' => $data]);
+    }
+    public function dustdown()
+    {
+        $data = DB::table('goods')
+        ->join('plants', 'goods.id', '=', 'plants.goods_id')
+        ->where('dust','<',6)
+        ->get();
+        return view('Shop', ['goods' => $data]);
+    }
+     
+     
+    //價格排序
     public function price($tpye)
     {  
    
