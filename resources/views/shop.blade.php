@@ -53,11 +53,10 @@
                                 <ul id="menu-content2" class="menu-content collapse show">
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#clothing">
-                                        <a href="#">光照</a>
+                                        <a href="#">淨化能力</a>
                                         <ul class="sub-menu collapse show" id="clothing">
-                                            <li><a href="{{route('clean.ass')}}">測試1</a></li>
-                                            <li><a href="#">測試2</a></li>
-                                            <li><a href="#">Dresses</a></li>
+                                            <li><a href="{{route('cleanup.shop')}}">高</a></li>
+                                            <li><a href="{{route('cleandown.shop')}}">低</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -67,11 +66,10 @@
                                 <ul id="menu-content2" class="menu-content collapse show">
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#clothing">
-                                        <a href="#">濕度</a>
+                                        <a href="#">滯塵能力</a>
                                         <ul class="sub-menu collapse show" id="clothing">
-                                            <li><a href="#">All</a></li>
-                                            <li><a href="#">Bodysuits</a></li>
-                                            <li><a href="#">Dresses</a></li>
+                                            <li><a href="#">高</a></li>
+                                            <li><a href="#">低</a></li>
                                         </ul>
                                     </li>
 
@@ -108,7 +106,7 @@
 
                         <div class="row">
                         
-                        @foreach ($goods as $good) 
+                        @foreach ($goods as $good)
                             <!-- Single Product -->
                             <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="single-product-wrapper">

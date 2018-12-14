@@ -19,17 +19,26 @@ class ShopController extends Controller
         $data = Good::all();
         return view('Shop', ['goods' => $data]);
     }
-    public function clean()
+    public function cleanup()
     {
 
-        $a = DB::table('goods')
-        ->join('plants', 'id', '=', 'plants.goods_id')
-        ->select('goods.goods_name1')
+        $data = DB::table('goods')
+        ->join('plants', 'goods.id', '=', 'plants.goods_id')
+        ->where('cleanup','>',5)
         ->get();
-        dd($a); 
+        return view('Shop', ['goods' => $data]);
         
     }
+    public function cleandown()
+    {
 
+        $data = DB::table('goods')
+        ->join('plants', 'goods.id', '=', 'plants.goods_id')
+        ->where('cleanup','<',6)
+        ->get();
+        return view('Shop', ['goods' => $data]);
+        
+    }
     public function price($tpye)
     {  
    
