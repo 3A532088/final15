@@ -68,4 +68,14 @@ class ShopController extends Controller
         return view('Shop', ['goods' => $data]);
     }
 
+    //搜尋
+    public function search($search)
+    {  
+    
+        $data = DB::table('goods')
+        ->where('goods_name2','like',$search.'%')
+        ->get();
+        return view('Shop', ['goods' => $data]);
+    }
+
 }

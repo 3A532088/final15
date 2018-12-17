@@ -29,8 +29,8 @@
             <div class="header-meta d-flex clearfix justify-content-end">
                 <!-- Search Area -->
                 <div class="search-area">
-                    <form action="#" method="post">
-                        <input type="search" name="search" id="headerSearch" placeholder="Type for search">
+                    <form action="{{route('search.shop',['search'=>''])}}" method="get">
+                        <input type="search" name="search" id="aa" placeholder="搜尋植物";> 
                         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </div>
@@ -40,9 +40,11 @@
                 </div>
                 <!-- Cart Area -->
                 <div class="cart-area">
-                    <a href="#" id="essenceCartBtn"><img src="{{asset('/img/core-img/bag.svg')}}" alt=""> <span>3</span></a>
+                    <a href="{{route('cart')}}" id="essenceCartBtn"><img src="{{asset('/img/core-img/bag.svg')}}" alt=""> <span></span></a>
                 </div>
             </div>
 
         </div>
     </header>
+
+
