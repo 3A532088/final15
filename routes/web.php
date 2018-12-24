@@ -19,8 +19,9 @@ Route::get('home',['as'=>'main.home',function(){
 }]);
 
 
-
+//顯示商品頁面
 Route::get('shop/main', ['as' => 'main.shop', 'uses' => 'ShopController@index']);
+
 
 Route::get('cart/{id}', ['as' => 'cart.add', 'uses' => 'CartController@index',function($id){
 
@@ -29,9 +30,19 @@ Route::get('cart/{id}', ['as' => 'cart.add', 'uses' => 'CartController@index',fu
 Route::get('cart', ['as' => 'cart.main', 'uses' => 'CartController@show',function(){
 }]);
 
+//顯示購物車頁面
+Route::get('cart', ['as' => 'cart', 'uses' => 'CartController@index']);
+
+
+//顯示商品詳細資訊頁面
+Route::get('detail/{id}', ['as' => 'detail', 'uses' => 'ShopDetailController@index',function($id){
+
+}]);
+
 //價格排序
 Route::get('shopprice/{type}', ['as' => 'sort.shop', 'uses' => 'ShopController@price',function($type){
 }]);
+
 
 //淨化能力篩選
 Route::get('shopclean/up', ['as' => 'cleanup.shop', 'uses' => 'ShopController@cleanup',function(){
