@@ -26,7 +26,7 @@ class ShopController extends Controller
 
         $data = DB::table('goods')
         ->join('plants', 'goods.id', '=', 'plants.goods_id')
-        ->where('cleanup','>',5)
+        ->where('cleanup_co2','>',5)
         ->get();
         return view('Shop', ['goods' => $data]);
         
@@ -36,7 +36,7 @@ class ShopController extends Controller
 
         $data = DB::table('goods')
         ->join('plants', 'goods.id', '=', 'plants.goods_id')
-        ->where('cleanup','<',6)
+        ->where('cleanup_co2','<',6)
         ->get();
         return view('Shop', ['goods' => $data]);
     }
