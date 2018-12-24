@@ -37,7 +37,7 @@
                 </div>
                 <!-- User Login Info -->
                 <div class="user-login-info">
-                    <a href="#"><img src="{{asset('/img/core-img/user.svg')}}" alt=""></a>
+                    <a href="{{route('login')}}"><img src="{{asset('/img/core-img/user.svg')}}" alt=""></a>
                 </div>
                 <!-- Cart Area -->
                 <div class="cart-area">
