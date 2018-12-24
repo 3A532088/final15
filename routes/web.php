@@ -59,6 +59,9 @@ Route::get('shopdust/down', ['as' => 'dustdown.shop', 'uses' => 'ShopController@
 //聯絡我們
 Route::get('contact', ['as' => 'main.contact', 'uses' => 'ContactController@index']);
 
+//植物新聞
+Route::get('news', ['as' => 'main.news', 'uses' => 'NewsController@index']);
+
 //搜尋
 Route::get('shop1/{search}', ['as' => 'search.shop', 'uses' => 'ShopController@search',function($search){
 

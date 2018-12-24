@@ -120,9 +120,7 @@
     </header>
     <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Right Side Cart Area ##### -->
-    <div class="cart-bg-overlay"></div>
-
+   
     <div class="right-side-cart-area">
 
         <!-- Cart Button -->
@@ -270,7 +268,11 @@
                 <div class="cart-fav-box d-flex align-items-center">
                     <!-- Cart -->
                     <button type="submit" name="addtocart" value="5" class="btn essence-btn">Add to cart</button>
+                    <tr>
+                　    <td>庫存量：{{$good->stock}}</td>
+                    </tr>
                 </div>
+                
             </form>
         </div>
         <!-- Single Product Description -->

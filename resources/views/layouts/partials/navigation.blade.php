@@ -18,6 +18,7 @@
                     <div class="classynav">
                         <ul>
                             <li><a href="{{route('main.shop')}}">Shop</a></li>
+                            <li><a href="{{route('main.news')}}">News</a></li>
                             <li><a href="{{route('main.contact')}}">Contact</a></li>
                         </ul>
                     </div>
@@ -29,8 +30,8 @@
             <div class="header-meta d-flex clearfix justify-content-end">
                 <!-- Search Area -->
                 <div class="search-area">
-                    <form action="{{route('search.shop',['search'=>''])}}" method="get">
-                        <input type="search" name="search" id="aa" placeholder="搜尋植物";> 
+                    <form action="{{route('search.shop',['search'])}}" method="get">
+                        <input type="search" name="search" id="search" placeholder="搜尋植物";> 
                         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </div>
