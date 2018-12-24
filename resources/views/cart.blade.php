@@ -32,9 +32,6 @@
             </div>
         </div>
 	</div>
-
-
-
 		<center> 
 		<table>
         <tr>
@@ -65,39 +62,37 @@
 			
 		</td>
 		</tr>
-		@for ($i=0; $i <2 ; $i++) 
-            　	   <tr>
+		@foreach ($carts as $cart) 
+        <tr >
         <td width="200" align="center" valign="center">
 			<div class="product-left">
-				<img src="../img/product-img/product_1.jpg">
+				<img src="../img/product-img/{{$cart[0]->photo1}}">
 			</div>
 		</td>
 		<td width="300" align="center" valign="center">
 			<div class="product-right">
-				<h6>常春藤</h6>
+				<h6>{{$cart[0]->goods_name2}}</h6>
 
 			</div>
 		</td>
 		<td width="200" align="center" valign="center">
 			<div class="product-right1">
-				<h6>$ 290<h6>
+				<h6>$ {{$cart[0]->price}}<h6>
 				<div class="close"> </div>
 			</div>
 		</td>
 		<td width="100" align="center" valign="center">
 			<div class="product-middle">
-				<select class="sel">
-					<option value="">1</option>
-					<option value="">2</option>
-					<option value="">3</option>
-					<option value="">4</option>
-					<option value="">5</option>
-				</select>
+              <form name="jump">
+  	 				<select onchange="location=document.jump.menu.options[document.jump.menu.selectedIndex].value;" value="GO" name="menu"><br />
+                    		<option value="{{route('cart.add',['id'=>'1'])}}">1</option>
+               		</select>
+       		  </form>
 			</div>
 		</td>
 		<td width="200" align="center" valign="center">
 			<div class="product-right1">
-				<h6>$ 290<h6>
+				<h6>$ {{($cart[0]->price)*1}}<h6>
 				<div class="close"> </div>
 			</div>
 		</td>
@@ -107,48 +102,7 @@
              </div>
 		</td>
 		</tr>
-		@endfor
-　	   <tr>
-        <td width="200" align="center" valign="center">
-			<div class="product-left">
-				<img src="../img/product-img/product_1.jpg">
-			</div>
-		</td>
-		<td width="300" align="center" valign="center">
-			<div class="product-right">
-				<h6>常春藤</h6>
-
-			</div>
-		</td>
-		<td width="200" align="center" valign="center">
-			<div class="product-right1">
-				<h6>$ 290<h6>
-				<div class="close"> </div>
-			</div>
-		</td>
-		<td width="100" align="center" valign="center">
-			<div class="product-middle">
-				<select class="sel">
-					<option value="">1</option>
-					<option value="">2</option>
-					<option value="">3</option>
-					<option value="">4</option>
-					<option value="">5</option>
-				</select>
-			</div>
-		</td>
-		<td width="200" align="center" valign="center">
-			<div class="product-right1">
-				<h6>$ 290<h6>
-				<div class="close"> </div>
-			</div>
-		</td>
-		<td width="200" align="center" valign="center">
-			<div class="clear">
-                    <a href="#"><img src="{{asset('/img/core-img/close.png')}}" alt=""></a>
-             </div>
-		</td>
-		</tr>
+		@endforeach
 		</table>
 		</center>
 

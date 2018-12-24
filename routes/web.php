@@ -22,7 +22,12 @@ Route::get('home',['as'=>'main.home',function(){
 
 Route::get('shop/main', ['as' => 'main.shop', 'uses' => 'ShopController@index']);
 
-Route::get('cart', ['as' => 'cart', 'uses' => 'CartController@index']);
+Route::get('cart/{id}', ['as' => 'cart.add', 'uses' => 'CartController@index',function($id){
+
+}]);
+
+Route::get('cart', ['as' => 'cart.main', 'uses' => 'CartController@show',function(){
+}]);
 
 //價格排序
 Route::get('shopprice/{type}', ['as' => 'sort.shop', 'uses' => 'ShopController@price',function($type){
