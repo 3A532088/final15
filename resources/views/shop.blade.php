@@ -124,7 +124,7 @@
                                         <span>
                                         {{$good->goods_name1}}
                                          </span>
-                                        <a href="single-product-details.html">
+                                        <a href="{{route('detail',['id'=>$good->id])}}">
                                             <h6> {{$good->goods_name2}}</h6>
                                         </a>
                                         <p class="product-price"> $ {{$good->price}}</p>
