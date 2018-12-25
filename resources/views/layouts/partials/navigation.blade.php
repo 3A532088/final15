@@ -40,7 +40,7 @@
                 </div>
                 <!-- Cart Area -->
                 <div class="cart-area">
-                    <a href="" id="essenceCartBtn"><img src="{{asset('/img/core-img/bag.svg')}}" alt=""> <span></span></a>
+                    <a href="{{route('cart')}}" id="essenceCartBtn"><img src="{{asset('/img/core-img/bag.svg')}}" alt=""> <span></span></a>
                 </div>
             </div>
 

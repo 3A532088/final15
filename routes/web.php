@@ -23,12 +23,10 @@ Route::get('home',['as'=>'main.home',function(){
 Route::get('shop/main', ['as' => 'main.shop', 'uses' => 'ShopController@index']);
 
 
-Route::get('cart/{id}', ['as' => 'cart.add', 'uses' => 'CartController@index',function($id){
 
-}]);
+Route::get('cart/{id}', ['as' => 'cart.add', 'uses' => 'CartController@add',function($id){
 
-Route::get('cart', ['as' => 'cart.main', 'uses' => 'CartController@show',function(){
-}]);
+}]);    
 
 //顯示購物車頁面
 Route::get('cart', ['as' => 'cart', 'uses' => 'CartController@index']);

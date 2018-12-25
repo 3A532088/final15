@@ -17,8 +17,6 @@
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="../css/core-style.css">
     <link rel="stylesheet" href="../style.css">
-
-
 </head>
 <body>
 	<div class="breadcumb_area bg-img" style="background-image: url(../img/core-img/cartbp.jpg);">
@@ -66,33 +64,35 @@
         <tr >
         <td width="200" align="center" valign="center">
 			<div class="product-left">
-				<img src="../img/product-img/{{$cart[0]->photo1}}">
+				<img src="../img/product-img/{{$cart->photo}}">
 			</div>
 		</td>
 		<td width="300" align="center" valign="center">
 			<div class="product-right">
-				<h6>{{$cart[0]->goods_name2}}</h6>
+				<h6>{{$cart->product}}</h6>
 
 			</div>
 		</td>
 		<td width="200" align="center" valign="center">
 			<div class="product-right1">
-				<h6>$ {{$cart[0]->price}}<h6>
+				<h6>$ {{$cart->cost}}<h6>
 				<div class="close"> </div>
 			</div>
 		</td>
 		<td width="100" align="center" valign="center">
-			<div class="product-middle">
-              <form name="jump">
-  	 				<select onchange="location=document.jump.menu.options[document.jump.menu.selectedIndex].value;" value="GO" name="menu"><br />
-                    		<option value="{{route('cart.add',['id'=>'1'])}}">1</option>
-               		</select>
-       		  </form>
-			</div>
+			<div class="product-right1">
+                 <form name="jump" >
+                 	<select onchange="location=document.jump.menu.options[document.jump.menu.selectedIndex].value;" value="GO" name="menu"><br />
+                    <option value="" selected="selected">1</option>
+                    <option value="{{route('sort.shop',['type'=>'asc'])}}">2</option>
+                    <option value="{{route('sort.shop',['type'=>'desc'])}}">3</option>
+                    </select>
+                 </form>
+            </div>
 		</td>
 		<td width="200" align="center" valign="center">
 			<div class="product-right1">
-				<h6>$ {{($cart[0]->price)*1}}<h6>
+				<h6>$ {{($cart->total)}}<h6>
 				<div class="close"> </div>
 			</div>
 		</td>
@@ -105,9 +105,5 @@
 		@endforeach
 		</table>
 		</center>
-
-
-
-
 </body>
 </html>
