@@ -22,15 +22,20 @@ Route::get('home',['as'=>'main.home',function(){
 //顯示商品頁面
 Route::get('shop/main', ['as' => 'main.shop', 'uses' => 'ShopController@index']);
 
-
-
-Route::get('cart/{id}', ['as' => 'cart.add', 'uses' => 'CartController@add',function($id){
-
-}]);    
-
 //顯示購物車頁面
 Route::get('cart', ['as' => 'cart', 'uses' => 'CartController@index']);
 
+//購物車商品新增
+Route::get('cart/{id}', ['as' => 'cart.add', 'uses' => 'CartController@add',function($id){
+}]);
+
+//購物車數量修改
+Route::get('cart/{id}/{q}', ['as' => 'cart.update', 'uses' => 'CartController@update',function($id,$q){
+}]);
+
+//購物車項目刪除
+Route::delete('cart/{id}',['as'=>'cart.delete','uses'=>'CartController@delete',function($id){
+}]);
 
 //顯示商品詳細資訊頁面
 Route::get('detail/{id}', ['as' => 'detail', 'uses' => 'ShopDetailController@index',function($id){

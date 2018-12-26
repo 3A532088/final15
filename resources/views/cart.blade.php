@@ -30,7 +30,12 @@
             </div>
         </div>
 	</div>
-		<center> 
+    @if(count($carts)<1)
+        <center>
+        <h2>Nothing in Cart!</h2>
+        </center>
+    @else
+		<center>
 		<table>
         <tr>
         <td width="200" align="center" valign="center">
@@ -38,7 +43,7 @@
 			    <h5></h5>
 			</div>
 		</td>
-		<td width="300" align="center" valign="center">
+		<td width="250" align="center" valign="center">
 			<div class="product-right">
 				<h5>Product Name</h5>
 			</div>
@@ -46,9 +51,14 @@
 		<td width="20" align="center" valign="center">
 				<h5>Prcie</h5>
 		</td>
-		<td width="200" align="center" valign="center">
+		<td width="50" align="center" valign="center">
 			<div class="product-right1">
 			    <h5>Quantity</h5>
+			</div>
+		</td>
+		<td width="5" align="center" valign="center">
+			<div class="product-right1">
+			    <h5></h5>
 			</div>
 		</td>
 		<td width="200" align="center" valign="center">
@@ -60,14 +70,14 @@
 			
 		</td>
 		</tr>
-		@foreach ($carts as $cart) 
+		@foreach ($carts as $cart)
         <tr >
         <td width="200" align="center" valign="center">
 			<div class="product-left">
 				<img src="../img/product-img/{{$cart->photo}}">
 			</div>
 		</td>
-		<td width="300" align="center" valign="center">
+		<td width="250" align="center" valign="center">
 			<div class="product-right">
 				<h6>{{$cart->product}}</h6>
 
@@ -75,35 +85,51 @@
 		</td>
 		<td width="200" align="center" valign="center">
 			<div class="product-right1">
-				<h6>$ {{$cart->cost}}<h6>
+				<h6>$ {{$cart->cost}}</h6>
 				<div class="close"> </div>
 			</div>
 		</td>
-		<td width="100" align="center" valign="center">
+		<td width="50" align="center" valign="center">
 			<div class="product-right1">
-                 <form name="jump" >
-                 	<select onchange="location=document.jump.menu.options[document.jump.menu.selectedIndex].value;" value="GO" name="menu"><br />
-                    <option value="" selected="selected">1</option>
-                    <option value="{{route('sort.shop',['type'=>'asc'])}}">2</option>
-                    <option value="{{route('sort.shop',['type'=>'desc'])}}">3</option>
-                    </select>
-                 </form>
+			    <h6>{{$cart->qty}}</h6>
+			</div>
+		</td>
+		<td width="5" align="center" valign="center">
+			<div class="product-right1">
+				<select name="qty" onchange="javascript:location.href=this.value;">
+					<option value="">數量修改</option>
+					<option value="{{route('cart.update',['id'=>$cart->id,'q'=>'1'])}}">1</option>
+					<option value="{{route('cart.update',['id'=>$cart->id,'q'=>'2'])}}">2</option>
+					<option value="{{route('cart.update',['id'=>$cart->id,'q'=>'3'])}}">3</option>
+					<option value="{{route('cart.update',['id'=>$cart->id,'q'=>'4'])}}">4</option>
+					<option value="{{route('cart.update',['id'=>$cart->id,'q'=>'5'])}}">5</option>
+					<option value="{{route('cart.update',['id'=>$cart->id,'q'=>'6'])}}">6</option>
+					<option value="{{route('cart.update',['id'=>$cart->id,'q'=>'7'])}}">7</option>
+					<option value="{{route('cart.update',['id'=>$cart->id,'q'=>'8'])}}">8</option>
+					<option value="{{route('cart.update',['id'=>$cart->id,'q'=>'9'])}}">9</option>
+					<option value="{{route('cart.update',['id'=>$cart->id,'q'=>'10'])}}">10</option>
+				</select>
             </div>
 		</td>
 		<td width="200" align="center" valign="center">
 			<div class="product-right1">
-				<h6>$ {{($cart->total)}}<h6>
+				<h6>$ {{($cart->total)}}</h6>
 				<div class="close"> </div>
 			</div>
 		</td>
 		<td width="200" align="center" valign="center">
 			<div class="clear">
-                    <a href="#"><img src="{{asset('/img/core-img/close.png')}}" alt=""></a>
+                <form action="{{ route('cart.delete', $cart->id) }}" method="POST">
+                    {{ csrf_field() }}
+                    {{ method_field('DELETE') }}
+                    <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>
+                </form>
              </div>
 		</td>
 		</tr>
 		@endforeach
 		</table>
 		</center>
+    @endif
 </body>
 </html>

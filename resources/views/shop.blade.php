@@ -53,7 +53,7 @@
                                 <ul id="menu-content2" class="menu-content collapse show">
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#clothing">
-                                        <a href="#">淨化能力</a>
+                                        <a>淨化能力</a>
                                         <ul class="sub-menu collapse show" id="clothing">
                                             <li><a href="{{route('cleanup.shop')}}">高</a></li>
                                             <li><a href="{{route('cleandown.shop')}}">低</a></li>
@@ -66,7 +66,7 @@
                                 <ul id="menu-content2" class="menu-content collapse show">
                                     <!-- Single Item -->
                                     <li data-toggle="collapse" data-target="#clothing">
-                                        <a href="#">滯塵能力</a>
+                                        <a>滯塵能力</a>
                                         <ul class="sub-menu collapse show" id="clothing">
                                             <li><a href="{{route('dustup.shop')}}">高</a></li>
                                             <li><a href="{{route('dustdown.shop')}}">低</a></li>
@@ -98,7 +98,7 @@
                                             <option value="{{route('sort.shop',['type'=>'asc'])}}">低到高</option>
                                             <option value="{{route('sort.shop',['type'=>'desc'])}}">高到低</option>
                                             </select>
-                                            </form>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

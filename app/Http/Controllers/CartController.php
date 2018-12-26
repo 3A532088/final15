@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Good;
 use Redirect;
 use App\Cart;
 use DB;
@@ -28,9 +27,29 @@ class CartController extends Controller
                 'photo' => $photo,
                 'product' => $good,
                 'cost' => $price,
-                'total' => 2 * $price
+                'total' => $price
              ]
         );
         return Redirect::to(url()->previous());
+    }
+
+    public function update($id,$q)
+    {
+        $cost = DB::table('carts')->where('id', $id)->value('cost');
+        DB::table('carts')
+        ->where('id', $id)
+        ->update([
+            'qty' => $q,
+            'total' => $cost * $q
+        ]);
+        return redirect()->route('cart');
+
+    }
+
+
+    public function delete($id)
+    {
+        Cart::destroy($id);
+        return redirect()->route('cart');
     }
 }
