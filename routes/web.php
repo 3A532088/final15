@@ -18,6 +18,12 @@ Route::get('home',['as'=>'main.home',function(){
     return view('index');
 }]);
 
+//使用者
+Route::auth();
+
+//訂單
+Route::get('/orders', 'OrderController@index');
+Route::post('/order', 'OrderController@store');
 
 //顯示商品頁面
 Route::get('shop/main', ['as' => 'main.shop', 'uses' => 'ShopController@index']);
@@ -61,6 +67,9 @@ Route::get('shopdust/down', ['as' => 'dustdown.shop', 'uses' => 'ShopController@
 
 //聯絡我們
 Route::get('contact', ['as' => 'main.contact', 'uses' => 'ContactController@index']);
+
+//植物新聞
+Route::get('news', ['as' => 'main.news', 'uses' => 'NewsController@index']);
 
 //搜尋
 Route::get('shop1/{search}', ['as' => 'search.shop', 'uses' => 'ShopController@search',function($search){

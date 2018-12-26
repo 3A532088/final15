@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+@extends('layouts.master')
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +10,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Essence - Fashion Ecommerce Template</title>
+    <title>植物新聞</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -201,12 +202,12 @@
     <!-- ##### Right Side Cart End ##### -->
 
     <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb_area breadcumb-style-two bg-img" style="background-image: url(img/bg-img/breadcumb2.jpg);">
+    <div class="breadcumb_area  bg-img" style="background-image: url(img/bg-img/breadcumb3.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="page-title text-center">
-                        <h2>Fashion Blog</h2>
+                        <h2>News</h2>
                     </div>
                 </div>
             </div>
@@ -222,19 +223,19 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog1.jpg" alt="">
+                        <img src="img/news-img/news1.jpg" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
-                            <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                            <a href="#">為保護生物多樣性 李家維買下苗栗1.2萬平方米山頭</a>
                         </div>
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <!-- Post Title -->
                             <div class="hover-post-title">
-                                <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                                <a href="#">為保護生物多樣性 李家維買下苗栗1.2萬平方米山頭</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor. Phasellus purus dignissim convallis.</p>
-                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
+                            <p>「我想讓自然界重新在這裡，發展出低海拔森林該有的樣子。」去年底墜谷靠「海底雞」 罐頭保命的清華大學生命科學系教授李家維，30年前鑿於苗栗縣南庄鄉獅山村海拔300多公尺的山區動植物優美，想要保護這裡的生物多樣性，而花330萬買下周遭1.2萬平方公尺的山林。</p>
+                            <a href="#">繼續閱讀<i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -242,19 +243,19 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog2.jpg" alt="">
+                        <img src="img/news-img/news2.jpg" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
-                            <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                            <a href="#">不要亂摘葉子！美國科學家發現植物「痛苦訊號」</a>
                         </div>
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <!-- Post Title -->
                             <div class="hover-post-title">
-                                <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                                <a href="#">不要亂摘葉子！美國科學家發現植物「痛苦訊號」</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor. Phasellus purus dignissim convallis.</p>
-                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
+                            <p>當人類被打到的時候，理所當然地會感到痛，那植物呢？美國1項最新的研究指出，植物其實也擁有類似動物的「痛覺」，這份研究還登上了權威性的學術期刊《科學》（Science）。</p>
+                            <a href="#">繼續閱讀<i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -262,19 +263,19 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog3.jpg" alt="">
+                        <img src="img/news-img/news3.jpg" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
-                            <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                            <a href="#">上一次是2014年 「屍花」綻放飄濃郁腐肉味！</a>
                         </div>
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <!-- Post Title -->
                             <div class="hover-post-title">
-                                <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                                <a href="#">上一次是2014年 「屍花」綻放飄濃郁腐肉味！</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor. Phasellus purus dignissim convallis.</p>
-                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
+                            <p>美國南加州杭廷頓圖書館（Huntington Library）一株巨花魔芋開花了，稀有的樣貌與獨特腐肉氣味，讓粉絲相當興奮。</p>
+                            <a href="#">繼續閱讀<i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -282,147 +283,30 @@
                 <!-- Single Blog Area -->
                 <div class="col-12 col-lg-6">
                     <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog4.jpg" alt="">
+                        <img src="img/news-img/news4.jpg" alt="">
                         <!-- Post Title -->
                         <div class="post-title">
-                            <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                            <a href="#">香蕉、鳳梨竟是外來種！專家：台灣植物原生種很少</a>
                         </div>
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <!-- Post Title -->
                             <div class="hover-post-title">
-                                <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
+                                <a href="#">香蕉、鳳梨竟是外來種！專家：台灣植物原生種很少</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor. Phasellus purus dignissim convallis.</p>
-                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
+                            <p>台灣物產豐饒，但你知道很多台灣盛產的水果其實來自其他國家嗎？植物蒐藏家王瑞閔表示，台灣原生植物實際上很少，大家認為的台灣特產水果鳳梨、香蕉其實都是外來種。</p>
+                            <a href="#">繼續閱讀<i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
                
-                <!-- Single Blog Area -->
-                <div class="col-12 col-lg-6">
-                    <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog5.jpg" alt="">
-                        <!-- Post Title -->
-                        <div class="post-title">
-                            <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
-                        </div>
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <!-- Post Title -->
-                            <div class="hover-post-title">
-                                <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor. Phasellus purus dignissim convallis.</p>
-                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-               
-                <!-- Single Blog Area -->
-                <div class="col-12 col-lg-6">
-                    <div class="single-blog-area mb-50">
-                        <img src="img/bg-img/blog6.jpg" alt="">
-                        <!-- Post Title -->
-                        <div class="post-title">
-                            <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
-                        </div>
-                        <!-- Hover Content -->
-                        <div class="hover-content">
-                            <!-- Post Title -->
-                            <div class="hover-post-title">
-                                <a href="#">Vivamus sed nunc in arcu cursus mollis quis et orci. Interdum et malesuada</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor. Phasellus purus dignissim convallis.</p>
-                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
     <!-- ##### Blog Wrapper Area End ##### -->
 
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer_area clearfix">
-        <div class="container">
-            <div class="row">
-                <!-- Single Widget Area -->
-                <div class="col-12 col-md-6">
-                    <div class="single_widget_area d-flex mb-30">
-                        <!-- Logo -->
-                        <div class="footer-logo mr-50">
-                            <a href="#"><img src="img/core-img/logo2.png" alt=""></a>
-                        </div>
-                        <!-- Footer Menu -->
-                        <div class="footer_menu">
-                            <ul>
-                                <li><a href="shop.html">Shop</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Widget Area -->
-                <div class="col-12 col-md-6">
-                    <div class="single_widget_area mb-30">
-                        <ul class="footer_widget_menu">
-                            <li><a href="#">Order Status</a></li>
-                            <li><a href="#">Payment Options</a></li>
-                            <li><a href="#">Shipping and Delivery</a></li>
-                            <li><a href="#">Guides</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Use</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row align-items-end">
-                <!-- Single Widget Area -->
-                <div class="col-12 col-md-6">
-                    <div class="single_widget_area">
-                        <div class="footer_heading mb-30">
-                            <h6>Subscribe</h6>
-                        </div>
-                        <div class="subscribtion_form">
-                            <form action="#" method="post">
-                                <input type="email" name="mail" class="mail" placeholder="Your email here">
-                                <button type="submit" class="submit"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Widget Area -->
-                <div class="col-12 col-md-6">
-                    <div class="single_widget_area">
-                        <div class="footer_social_area">
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row mt-5">
-                <div class="col-md-12 text-center">
-                    <p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </p>
-                </div>
-            </div>
-            
-        </div>
-
-
-
-    </footer>
+  
     <!-- ##### Footer Area End ##### -->
 
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
