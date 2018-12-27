@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 use App\Good;
 use App\Plant;
@@ -62,21 +63,28 @@ class ShopController extends Controller
      
     //價格排序
     public function price($tpye)
-    {  
-   
+    {
+
         $data = Good::orderBy('price', $tpye)->get();
         return view('Shop', ['goods' => $data]);
     }
 
     //搜尋
-    public function search($search)
-    {  
-    
-        $data = DB::table('goods')
-        ->join('plants', 'goods.id', '=', 'plants.goods_id')
-        ->where('goods_name2','like',$search.'%')
-        ->get();
+    public function search(Request $request)
+    {
+
+        $search = $request->input("search");
+
+        $data =DB::table('goods')
+            ->join('plants', 'goods.id', '=', 'plants.goods_id')
+            ->where('goods_name2','like','%'.$search.'%')
+            ->get();
+        /*DD($data);*/
+
+
         return view('Shop', ['goods' => $data]);
     }
+
+
 
 }
