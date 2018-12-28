@@ -30,6 +30,10 @@
             </div>
         </div>
 	</div>
+	<div class="clearfix mr-50 mt-50 mb-50">
+	</div>
+	<div class="clearfix mr-50 mt-50 mb-50">
+	</div>
     @if(count($carts)<1)
         <center>
         <h2>Nothing in Cart!</h2>
@@ -131,5 +135,9 @@
 		</table>
 		</center>
     @endif
+	<div class="clearfix mr-50 mt-50 mb-50">
+	</div>
+	<div class="clearfix mr-50 mt-50 mb-50">
+	</div>
 </body>
 </html>
