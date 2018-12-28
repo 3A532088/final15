@@ -79,7 +79,7 @@ class ShopController extends Controller
             ->join('plants', 'goods.id', '=', 'plants.goods_id')
             ->where('goods_name2','like','%'.$search.'%')
             ->get();
-        /*DD($data);*/
+
 
 
         return view('Shop', ['goods' => $data]);
