@@ -56,7 +56,7 @@ a {
     outline: 0 solid transparent;
     color: #000000;
     font-weight: 600;
-    font-size: 12px; }
+    font-size: 18px; }
 
 ul,
 ol {
@@ -231,7 +231,7 @@ img {
   border-radius: 0;
   padding: 0 40px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 50px;
   background-color: #0315ff;
   letter-spacing: 1.5px;
@@ -648,7 +648,9 @@ img {
     margin-bottom: 10px; }
   .welcome_area .hero-content h2 {
     font-size: 60px;
-    color: #000000;
+    background: linear-gradient(to right,black,gray,white,gray);
+    -webkit-background-clip: text;
+    color: transparent;
     margin-bottom: 50px; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .welcome_area .hero-content h2 {
