@@ -72,7 +72,8 @@ Route::get('contact', ['as' => 'main.contact', 'uses' => 'ContactController@inde
 Route::get('news', ['as' => 'main.news', 'uses' => 'NewsController@index']);
 
 //搜尋
-Route::get('shop1/{search}', ['as' => 'search.shop', 'uses' => 'ShopController@search',function($search){
+Route::post('/shop/search',['as'=> 'search','uses'=>'ShopController@search']);
 
-}]);
-
+Route::get('/checkout', function () {
+    return view('checkout');
+});
