@@ -13,8 +13,12 @@ class CartController extends Controller
     
     public function index()
     {
+        $all = 0;
         $data = Cart::all();
-        return view('cart',['carts' => $data]);
+        foreach ($data as $s){
+            $all = $all + $s->total;
+        }
+        return view('cart',['carts' => $data,'a' =>$all]);
     }
 
     public function add($id)

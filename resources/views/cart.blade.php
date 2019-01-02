@@ -120,6 +120,7 @@
 				<h6>$ {{($cart->total)}}</h6>
 				<div class="close"> </div>
 			</div>
+
 		</td>
 		<td width="200" align="center" valign="center">
 			<div class="clear">
@@ -133,7 +134,15 @@
 		</tr>
 		@endforeach
 		</table>
+			<h3>結帳總金額 : $ <?php echo $a; ?></h3>
+			<div class="add-to-cart-btn">
+				<a href="" class="btn essence-btn">結帳</a>
+			</div>
+
 		</center>
+
+
+
     @endif
 	<div class="clearfix mr-50 mt-50 mb-50">
 	</div>

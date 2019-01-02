@@ -14,12 +14,18 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('home',['as'=>'main.home',function(){
+Route::get('index',['as'=>'main.home',function(){
     return view('index');
 }]);
 
+Route::get('home',['as'=>'main.user',function(){
+    return view('home');
+}]);
+
+
 //使用者
 Route::auth();
+
 
 //訂單
 Route::get('/orders', 'OrderController@index');
@@ -54,15 +60,15 @@ Route::get('shopprice/{type}', ['as' => 'sort.shop', 'uses' => 'ShopController@p
 
 
 //淨化能力篩選
-Route::get('shopclean/up', ['as' => 'cleanup.shop', 'uses' => 'ShopController@cleanup',function(){
+Route::get('shop/up', ['as' => 'cleanup.shop', 'uses' => 'ShopController@cleanup',function(){
 }]);
-Route::get('shopclean/down', ['as' => 'cleandown.shop', 'uses' => 'ShopController@cleandown',function(){
+Route::get('shop/dustdown', ['as' => 'cleandown.shop', 'uses' => 'ShopController@cleandown',function(){
 }]);
 
 //滯塵能力篩選
-Route::get('shopdust/up', ['as' => 'dustup.shop', 'uses' => 'ShopController@dustup',function(){
+Route::get('shop/cleanup', ['as' => 'dustup.shop', 'uses' => 'ShopController@dustup',function(){
 }]);
-Route::get('shopdust/down', ['as' => 'dustdown.shop', 'uses' => 'ShopController@dustdown',function(){
+Route::get('shop/cleandown', ['as' => 'dustdown.shop', 'uses' => 'ShopController@dustdown',function(){
 }]);
 
 //聯絡我們
@@ -72,6 +78,6 @@ Route::get('contact', ['as' => 'main.contact', 'uses' => 'ContactController@inde
 Route::get('news', ['as' => 'main.news', 'uses' => 'NewsController@index']);
 
 //搜尋
-Route::post('/shop/search',['as'=> 'search','uses'=>'ShopController@search']);
+Route::post('shop/search',['as'=> 'search','uses'=>'ShopController@search']);
 
 
