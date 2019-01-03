@@ -77,3 +77,4 @@ Route::post('/shop/search',['as'=> 'search','uses'=>'ShopController@search']);
 Route::get('/checkout', function () {
     return view('checkout');
 });
+Route::post('checkout', 'CheckoutController@store')->name('checkout');

@@ -37,16 +37,17 @@
                             <h5>帳單地址</h5>
                         </div>
 
-                        <form action="#" method="post">
+                        <form action="checkout" method="post">
+                            {{ csrf_field() }}
                             <div class="row">
                                 <div class="col-md-6 mb-3">
 
-                                    <label for="first_name">名字 <span>*</span></label>
-                                    <input type="text" class="form-control" id="first_name" value="" required>
+                                    <label for="name">名字 <span>*</span></label>
+                                    <input type="text" class="form-control" id="name"  required>
                                 </div>
                                 <div class="col-12 mb-3">
-                                    <label for="street_address">地址 <span>*</span></label>
-                                    <input type="text" class="form-control mb-3" id="street_address" value="">
+                                    <label for="check_address">地址 <span>*</span></label>
+                                    <input type="text" class="form-control mb-3" id="check_address" value="">
 
                                 </div>
                                 <div class="col-12 mb-3">
@@ -59,14 +60,7 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <div class="custom-control custom-checkbox d-block mb-2">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                        <label class="custom-control-label" for="customCheck1">條款和條件</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox d-block">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                    <label class="custom-control-label" for="customCheck3">是否訂閱我們</label>
-                                </div>
+
                                 </div>
                             </div>
                         </form>
@@ -84,10 +78,6 @@
                             <li><span>商品</span> <span>Total</span></li>
 
                         </ul>
-
-
-
-
                     </div>
                 </div>
             </div>
@@ -99,7 +89,7 @@
 
 </body>
 <div class="container" align="center">
-<a href="#" class="btn essence-btn">Place Order</a>
+<a href="checkout" class="btn essence-btn">結帳</a>
     </div>
 <div class="clearfix mr-50 mt-50 mb-50">
 </div>
