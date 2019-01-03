@@ -1,15 +1,47 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
+@extends('layouts.master')
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+    <!-- Title  -->
+    <title>室內植物盆栽訂購系統</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="../img/core-img/plant.ico">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="../css/core-style.css">
+    <link rel="stylesheet" href="../style.css">
+
+
+</head>
+<div class="breadcumb_area  bg-img" style="background-image: url(img/bg-img/test4.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="page-title text-center">
+                    <h2>USER</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container">
 
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <div class="clearfix mr-50 mt-50 mb-50">
+            </div>
             <div class="card">
                 <div class="card-header"style="text-align:center">{{ __('註冊') }}</div>
 
-                <div class="card-body">
+                <div class="card-body" >
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -75,19 +107,20 @@
                                 @endif
                             </div>
                         </div>
-
-
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="container h-100" align="center" >
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('註冊') }}
                                 </button>
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-@endsection
+<div class="clearfix mr-50 mt-50 mb-50">
+</div>
+</html>
