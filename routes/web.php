@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('regular-page');
 });
 Route::get('home',['as'=>'main.home',function(){
     return view('index');
@@ -70,6 +70,8 @@ Route::get('contact', ['as' => 'main.contact', 'uses' => 'ContactController@inde
 
 //植物新聞
 Route::get('news', ['as' => 'main.news', 'uses' => 'NewsController@index']);
+Route::get('news/detail', ['as' => 'news.detail', 'uses' => 'NewsDetailController@news']);
+
 
 //搜尋
 Route::post('/shop/search',['as'=> 'search','uses'=>'ShopController@search']);

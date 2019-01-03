@@ -235,7 +235,7 @@
                                 <a href="#">為保護生物多樣性 李家維買下苗栗1.2萬平方米山頭</a>
                             </div>
                             <p>「我想讓自然界重新在這裡，發展出低海拔森林該有的樣子。」去年底墜谷靠「海底雞」 罐頭保命的清華大學生命科學系教授李家維，30年前鑿於苗栗縣南庄鄉獅山村海拔300多公尺的山區動植物優美，想要保護這裡的生物多樣性，而花330萬買下周遭1.2萬平方公尺的山林。</p>
-                            <a href="#">繼續閱讀<i class="fa fa-angle-right"></i></a>
+                            <a href="{{route('news.detail')}}">繼續閱讀<i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -255,7 +255,7 @@
                                 <a href="#">不要亂摘葉子！美國科學家發現植物「痛苦訊號」</a>
                             </div>
                             <p>當人類被打到的時候，理所當然地會感到痛，那植物呢？美國1項最新的研究指出，植物其實也擁有類似動物的「痛覺」，這份研究還登上了權威性的學術期刊《科學》（Science）。</p>
-                            <a href="#">繼續閱讀<i class="fa fa-angle-right"></i></a>
+                            <a href="{{route('news.detail')}}">繼續閱讀<i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -275,7 +275,7 @@
                                 <a href="#">上一次是2014年 「屍花」綻放飄濃郁腐肉味！</a>
                             </div>
                             <p>美國南加州杭廷頓圖書館（Huntington Library）一株巨花魔芋開花了，稀有的樣貌與獨特腐肉氣味，讓粉絲相當興奮。</p>
-                            <a href="#">繼續閱讀<i class="fa fa-angle-right"></i></a>
+                            <a href="{{route('news.detail')}}">繼續閱讀<i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -295,7 +295,7 @@
                                 <a href="#">香蕉、鳳梨竟是外來種！專家：台灣植物原生種很少</a>
                             </div>
                             <p>台灣物產豐饒，但你知道很多台灣盛產的水果其實來自其他國家嗎？植物蒐藏家王瑞閔表示，台灣原生植物實際上很少，大家認為的台灣特產水果鳳梨、香蕉其實都是外來種。</p>
-                            <a href="#">繼續閱讀<i class="fa fa-angle-right"></i></a>
+                            <a href="{{route('news.detail')}}">繼續閱讀<i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
