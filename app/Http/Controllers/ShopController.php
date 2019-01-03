@@ -10,6 +10,11 @@ use App\Plant;
 use DB;
 class ShopController extends Controller
 {
+    public function show()
+    {
+        return view('shop');
+    }
+
     public function index()
     {
         $data = Good::all();
@@ -74,6 +79,9 @@ class ShopController extends Controller
             ->join('plants', 'goods.id', '=', 'plants.goods_id')
             ->where('goods_name2','like','%'.$search.'%')
             ->get();
+
+
+
         return view('Shop', ['goods' => $data]);
     }
 
