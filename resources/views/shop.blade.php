@@ -115,9 +115,6 @@
                                         <img src="../img/product-img/{{$good->photo1}}" alt="">
                                         <!-- Hover Thumb -->
                                         <img class="hover-img" src="../img/product-img/{{$good->photo2}}" alt="">
-
-                                       
-                                       
                                     </div>
                                     <!-- Product Description -->
                                     <div class="product-description">
