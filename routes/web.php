@@ -12,11 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('regular-page');
+    return view('index');
 });
-Route::get('home',['as'=>'main.home',function(){
+Route::get('index',['as'=>'main.home',function(){
     return view('index');
 }]);
+Route::get('home',['as'=>'main.user',function(){
+    return view('home');
+}]);
+
 
 //使用者
 Route::auth();
