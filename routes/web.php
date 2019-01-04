@@ -22,11 +22,13 @@ Route::get('home',['as'=>'main.user',function(){
 }]);
 
 
+Route::get('home',['as'=>'main.user','uses' => 'OrderController@index',function(){
+    return view('home');
+}]);
 //使用者
 Route::auth();
 
 //訂單
-Route::get('/orders', 'OrderController@index');
 Route::post('/order', 'OrderController@store');
 
 //顯示商品頁面
@@ -81,9 +83,11 @@ Route::get('news/detail', ['as' => 'news.detail', 'uses' => 'NewsDetailControlle
 Route::post('/shop/search',['as'=> 'search','uses'=>'ShopController@search']);
 
 
-//訂單使用者資料
-Route::post('/orders',['as'=>'orders.store','uses'=>'CheckoutController@store'],function (Request $request) {
 
-});
-
+//checkout
 Route::get('checkout',['as'=> 'checkout','uses'=>'CheckoutController@cartdetail']);
+
+Route::post('/orders',['as'=> 'orders.store','uses'=>'CheckoutController@store',function(Request $request){
+}]);
+
+

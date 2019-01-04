@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
+
 use DB;
 use App\Cart;
 use App\Order;
@@ -20,11 +21,13 @@ class CheckoutController extends Controller
     {
         $all = 0;
         $data = DB::table('carts')
-            ->where('users_id',Auth::user()->id)
+            ->where('users_id', Auth::user()->id)
             ->get();
-        foreach ($data as $s){
+        foreach ($data as $s) {
             $all = $all + $s->total;
         }
-        return view('checkout', ['checkouts' => $data,'a' =>$all]);
+        return view('checkout', ['checkouts' => $data, 'a' => $all]);
+
     }
+
 }

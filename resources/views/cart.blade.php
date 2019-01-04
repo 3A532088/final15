@@ -140,7 +140,6 @@
 				<a href="{{route('checkout')}}" class="btn essence-btn">結帳</a>
 			</div>
 
-		</center>
 
 
 

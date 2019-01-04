@@ -16,9 +16,12 @@ class OrderController extends Controller
     {
         $orders = Order::where('user_id', $request->user()->id)->get();
 
-        return view('orders.index', [
+        return view('home', [
             'orders' => $orders,
         ]);
+
+     // 取得發表文章的使用者資訊
+        $user = $orders->user();
     }
 
     public function store(Request $request)

@@ -7,19 +7,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    protected $table = 'orders';
 
+    protected $table ='orders';
 
-    protected $fillable = [
-        'address',
-        'quantity',
-        'total_money',
-        'created_at',
-        'updated_at',
-        'mail_number',
-        'cellphone',
-        'updated_at',
-        'username',
+    public function User()
+    {
+    return $this->belongsTo('app\User');
+    }
+    public function carts()
+    {
+        return $this->hasMany('app\Cart');
+    }
+      protected  $fillable=[
+     'name', 'postcode', 'ph_number', 'address', 'created_at', 'updated_at',
+];
+    protected $hidden = [
+        'user_id',
     ];
 
 
