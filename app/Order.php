@@ -21,9 +21,7 @@ class Order extends Model
       protected  $fillable=[
      'name', 'postcode', 'ph_number', 'address', 'created_at', 'updated_at',
 ];
-    protected $hidden = [
-        'user_id',
-    ];
+
 
 
 }
