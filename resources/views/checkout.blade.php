@@ -42,21 +42,21 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
 
-                                <label for="name">名字 <span>*</span></label>
+                                <label for="name">收件人姓名<span>*</span></label>
                                 <input type="text" class="form-control" name="name"  required>
                             </div>
                             <div class="col-12 mb-3">
                                 <label for="address">地址 <span>*</span></label>
-                                <input type="text" class="form-control mb-3" name="address" value="">
+                                <input type="text" class="form-control mb-3" name="address"required>
 
                             </div>
-                            <div class="col-12 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="postcode">郵遞區號 <span>*</span></label>
-                                <input type="text" class="form-control" name="postcode" value="">
+                                <input type="text" class="form-control" name="postcode"required>
                             </div>
-                            <div class="col-12 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="ph_number">電話號碼 <span>*</span></label>
-                                <input type="number" class="form-control" name="ph_number" min="0" value="">
+                                <input type="text" class="form-control" name="ph_number" min="0"required>
                             </div>
                             <div class="container" align="center">
                                 <button type="submit" class="btn essence-btn">結帳</button>
