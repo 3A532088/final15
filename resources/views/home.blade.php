@@ -87,7 +87,7 @@
             </div>
 
             <div class="card">
-                <div class="card-header"style="text-align:center">{{ __('個人資料') }}</div>
+                <div class="card-header"style="text-align:center">{{ __('訂單資料') }}</div>
 
 
                 <div class="card-body">
