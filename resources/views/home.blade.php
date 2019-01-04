@@ -100,15 +100,14 @@
 
                         @foreach ($orders as $order)
                             <!-- Single Product -->
-                                <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="contact-info">
                                     <div class="single-product-wrapper">
-                                     <span>{{$order->name}}</span>
-                                        <span>{{$order->postcode}}</span>
-                                        <span>{{$order->ph_number}}</span>
-                                        <span>{{$order->address}}</span>
+                                        姓名：<span>{{$order->name}}</span>&nbsp;
+                                        郵遞區號：<span>{{$order->postcode}}</span>&nbsp;
+                                        手機號碼：<span>{{$order->ph_number}}</span>&nbsp;
+                                        地址：<span>{{$order->address}}</span>
                                     </div>
                                 </div>
-
                             @endforeach
                         </div>
                 </div>
