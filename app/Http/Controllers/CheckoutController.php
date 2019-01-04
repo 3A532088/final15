@@ -14,7 +14,7 @@ class CheckoutController extends Controller
     public function store(Request $request)
     {
         Order::create($request->all());
-        DB::table('orders')->update(['users_id'=>Auth::user()->id]);
+        DB::table('orders')->where('users_id',null)->update(['users_id'=>Auth::user()->id]);
         DB::table('carts')->where('users_id', Auth::user()->id)->delete();
         return redirect()->route('main.user');
     }
