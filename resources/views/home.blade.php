@@ -59,6 +59,7 @@
                     手機號碼：{{ Auth::user()->cellphone }} <span class="caret"></span><br>
                 </div>
 
+
                 <div class="card-body" aria-labelledby="navbarDropdown">
                     <a class="card-body" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
@@ -68,6 +69,48 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-8">
+            <div class="clearfix mr-50 mt-50 mb-50">
+            </div>
+
+            <div class="card">
+                <div class="card-header"style="text-align:center">{{ __('個人資料') }}</div>
+
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                        <div class="row">
+
+                        @foreach ($orders as $order)
+                            <!-- Single Product -->
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="single-product-wrapper">
+                                     <span>{{$order->name}}</span>
+                                        <span>{{$order->postcode}}</span>
+                                        <span>{{$order->ph_number}}</span>
+                                        <span>{{$order->address}}</span>
+                                    </div>
+                                </div>
+
+                            @endforeach
+                        </div>
                 </div>
             </div>
         </div>

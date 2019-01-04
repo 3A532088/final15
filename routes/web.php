@@ -14,15 +14,17 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('home',['as'=>'main.home',function(){
+Route::get('index',['as'=>'main.home',function(){
     return view('index');
 }]);
 
+Route::get('home',['as'=>'main.user','uses' => 'OrderController@index',function(){
+    return view('home');
+}]);
 //使用者
 Route::auth();
 
 //訂單
-Route::get('/orders', 'OrderController@index');
 Route::post('/order', 'OrderController@store');
 
 //顯示商品頁面
@@ -74,7 +76,10 @@ Route::get('news', ['as' => 'main.news', 'uses' => 'NewsController@index']);
 //搜尋
 Route::post('/shop/search',['as'=> 'search','uses'=>'ShopController@search']);
 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
-Route::post('checkout', 'CheckoutController@store')->name('checkout');
+
+//checkout
+Route::get('checkout',['as'=> 'checkout','uses'=>'CheckoutController@cartdetail']);
+Route::post('/orders',['as'=> 'orders.store','uses'=>'CheckoutController@store',function(Request $request){
+}]);
+
+
