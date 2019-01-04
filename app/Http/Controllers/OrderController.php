@@ -20,8 +20,6 @@ class OrderController extends Controller
             'orders' => $orders,
         ]);
 
-     // 取得發表文章的使用者資訊
-        $user = $orders->user();
     }
 
     public function store(Request $request)
