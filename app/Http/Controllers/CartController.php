@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use function Composer\Autoload\includeFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Redirect;
@@ -20,7 +19,9 @@ class CartController extends Controller
 
         if (Auth::check()) {
             $all = 0;
-            $data = Cart::all();
+            $data = DB::table('carts')
+                ->where('users_id',Auth::user()->id)
+                ->get();
             foreach ($data as $s){
                 $all = $all + $s->total;
             }
@@ -43,7 +44,8 @@ class CartController extends Controller
                     'photo' => $photo,
                     'product' => $good,
                     'cost' => $price,
-                    'total' => $price
+                    'total' => $price,
+                    'users_id' => Auth::user()->id
                 ]
             );
             return Redirect::to(url()->previous());

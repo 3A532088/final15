@@ -3,14 +3,24 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use app\User;
+
+
 class Order extends Model
 {
-    protected $fillable = ['name'];
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
+    protected $table = 'orders';
+
+
+    protected $fillable = [
+        'address',
+        'quantity',
+        'total_money',
+        'created_at',
+        'updated_at',
+        'mail_number',
+        'cellphone',
+        'updated_at',
+        'username',
+    ];
 
 
 }
