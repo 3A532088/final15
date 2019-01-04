@@ -17,6 +17,10 @@ Route::get('/', function () {
 Route::get('index',['as'=>'main.home',function(){
     return view('index');
 }]);
+Route::get('home',['as'=>'main.user',function(){
+    return view('home');
+}]);
+
 
 Route::get('home',['as'=>'main.user','uses' => 'OrderController@index',function(){
     return view('home');
@@ -72,6 +76,8 @@ Route::get('contact', ['as' => 'main.contact', 'uses' => 'ContactController@inde
 
 //植物新聞
 Route::get('news', ['as' => 'main.news', 'uses' => 'NewsController@index']);
+Route::get('news/detail', ['as' => 'news.detail', 'uses' => 'NewsDetailController@news']);
+
 
 //搜尋
 Route::post('/shop/search',['as'=> 'search','uses'=>'ShopController@search']);

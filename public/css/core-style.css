@@ -56,7 +56,9 @@ a {
     outline: 0 solid transparent;
     color: #000000;
     font-weight: 600;
+
     font-size: 16px; }
+
 
 ul,
 ol {
@@ -238,7 +240,8 @@ img {
   font-weight: 600; }
   .essence-btn:hover, .essence-btn:focus {
     color: #ffffff;
-    background-color: #dc0345; }
+    background-color: #dc0345;
+  }
 
 /* :: 4.0 Header Area CSS */
 .header_area {
