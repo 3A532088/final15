@@ -78,7 +78,7 @@
                             </div>
 
                             <p>美國舊金山一間新創公司推出了智慧型盆栽，內建LED日照燈和儲水槽，只要插上電就能種出美麗植物。在辦公桌上放個盆栽很療癒，但很多人工作一忙就忘記澆水施肥，舊金山一間新創公司推出智慧型盆栽，再忙的人也不用擔心養死植物。</p>
-                            <a href="#">繼續閱讀<i class="fa fa-angle-right"></i></a>
+                            <a href="{{route('news.detail')}}">繼續閱讀<i class="fa fa-angle-right"></i></a>
 
                         </div>
                     </div>
