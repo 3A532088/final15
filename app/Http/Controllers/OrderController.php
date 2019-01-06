@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Order;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+
 class OrderController extends Controller
 {
     public function __construct()
@@ -12,13 +14,12 @@ class OrderController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(Request $request)
+    public function index()
     {
-        $orders = Order::where('user_id', $request->user()->id)->get();
+        $orders = Order::where('users_id',Auth::user()->id)->get();
 
-        return view('orders.index', [
-            'orders' => $orders,
-        ]);
+        return view('home',['orders' => $orders]);
+
     }
 
     public function store(Request $request)

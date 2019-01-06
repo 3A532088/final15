@@ -8,5 +8,8 @@ class Cart extends Model
 {
     protected $table ='carts';
 
-
+    public function order()
+    {
+        return $this->belongsTo(Order::class);
+    }
 }

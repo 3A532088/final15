@@ -22,11 +22,13 @@ Route::get('home',['as'=>'main.user',function(){
 }]);
 
 
+Route::get('home',['as'=>'main.user','uses' => 'OrderController@index',function(){
+    return view('home');
+}]);
 //使用者
 Route::auth();
 
 //訂單
-Route::get('/orders', 'OrderController@index');
 Route::post('/order', 'OrderController@store');
 
 //顯示商品頁面
@@ -58,15 +60,15 @@ Route::get('shopprice/{type}', ['as' => 'sort.shop', 'uses' => 'ShopController@p
 
 
 //淨化能力篩選
-Route::get('shopclean/up', ['as' => 'cleanup.shop', 'uses' => 'ShopController@cleanup',function(){
+Route::get('shop/cleanup', ['as' => 'cleanup.shop', 'uses' => 'ShopController@cleanup',function(){
 }]);
-Route::get('shopclean/down', ['as' => 'cleandown.shop', 'uses' => 'ShopController@cleandown',function(){
+Route::get('shop/cleandown', ['as' => 'cleandown.shop', 'uses' => 'ShopController@cleandown',function(){
 }]);
 
 //滯塵能力篩選
-Route::get('shopdust/up', ['as' => 'dustup.shop', 'uses' => 'ShopController@dustup',function(){
+Route::get('shop/dustup', ['as' => 'dustup.shop', 'uses' => 'ShopController@dustup',function(){
 }]);
-Route::get('shopdust/down', ['as' => 'dustdown.shop', 'uses' => 'ShopController@dustdown',function(){
+Route::get('shop/dustdown', ['as' => 'dustdown.shop', 'uses' => 'ShopController@dustdown',function(){
 }]);
 
 //聯絡我們
@@ -80,7 +82,12 @@ Route::get('news/detail', ['as' => 'news.detail', 'uses' => 'NewsDetailControlle
 //搜尋
 Route::post('/shop/search',['as'=> 'search','uses'=>'ShopController@search']);
 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
-Route::post('checkout', 'CheckoutController@store')->name('checkout');
+
+
+//checkout
+Route::get('checkout',['as'=> 'checkout','uses'=>'CheckoutController@cartdetail']);
+
+Route::post('/orders',['as'=> 'orders.store','uses'=>'CheckoutController@store',function(Request $request){
+}]);
+
+
