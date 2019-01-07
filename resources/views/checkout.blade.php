@@ -76,12 +76,29 @@
                         <h5>訂單明細</h5>
                     </div>
 
-                    <ul class="order-details-form mb-4">
-                        <li><span>商品</span><span>  單價</span><span>數量</span><span>總計</span></li>
+
+                        <div class="clearfix">
+                            <table class="table" >
+
+                                <tr>
+                                    <td align="left">商品</td>
+                                    <td align="center">單價</td>
+                                    <td align="center">數量</td>
+                                    <td align="right">總計</td>
+                                </tr>
+
                         @foreach($checkouts as $checkout)
-                            <li><span>{{$checkout->product}}</span><span>{{$checkout->cost}}</span><span>{{$checkout->qty}}</span><span>{{$checkout->total  }}</span></li>
+                                 <tr>
+                                  　<td align="left">{{$checkout->product}}</td>
+                                    <td align="center">{{$checkout->cost}}</td>
+                                    <td align="center">{{$checkout->qty}}</td>
+                                    <td align="right">{{$checkout->total}}</td>
+                                 </tr>
                         @endforeach
-                    </ul>
+                            </table>
+                        </div>
+
+
                     <h6>總金額 : $<?php echo $a; ?></h6>
 
                 </div>

@@ -65,10 +65,6 @@
             </div>
         </div>
     </div>
-    <!-- ##### Blog Wrapper Area End ##### -->
-
-  
-    <!-- ##### Footer Area End ##### -->
 
 
 </body>
