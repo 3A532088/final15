@@ -28,8 +28,8 @@ Route::get('home',['as'=>'main.user','uses' => 'OrderController@index',function(
 //使用者
 Route::auth();
 
-//訂單
-Route::post('/order', 'OrderController@store');
+
+
 
 //顯示商品頁面
 Route::get('shop/main', ['as' => 'main.shop', 'uses' => 'ShopController@index']);

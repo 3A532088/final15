@@ -74,4 +74,5 @@ class CartController extends Controller
         Cart::destroy($id);
         return redirect()->route('cart');
     }
+
 }

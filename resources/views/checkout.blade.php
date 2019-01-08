@@ -43,20 +43,20 @@
                             <div class="col-md-6 mb-3">
 
                                 <label for="name">收件人姓名<span>*</span></label>
-                                <input type="text" class="form-control" name="name"  required>
+                                <input type="text" class="form-control" name="name" maxlength="8" required>
                             </div>
                             <div class="col-12 mb-3">
                                 <label for="address">地址 <span>*</span></label>
-                                <input type="text" class="form-control mb-3" name="address"required>
+                                <input type="text" class="form-control mb-3" name="address" maxlength="35" required>
 
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="postcode">郵遞區號 <span>*</span></label>
-                                <input type="text" class="form-control" name="postcode"required>
+                                <input type="text" class="form-control" name="postcode" maxlength="5" required>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="ph_number">電話號碼 <span>*</span></label>
-                                <input type="text" class="form-control" name="ph_number" min="0"required>
+                                <input type="text" class="form-control" name="ph_number" min="0" maxlength="10" required>
                             </div>
                             <div class="container" align="center">
                                 <button type="submit" class="btn essence-btn">結帳</button>
