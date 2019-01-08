@@ -76,7 +76,8 @@ Route::get('contact', ['as' => 'main.contact', 'uses' => 'ContactController@inde
 
 //植物新聞
 Route::get('news', ['as' => 'main.news', 'uses' => 'NewsController@index']);
-Route::get('news/detail', ['as' => 'news.detail', 'uses' => 'NewsDetailController@news']);
+Route::get('news/detail/{id}', ['as' => 'news.detail', 'uses' => 'NewsDetailController@news',function($id){
+}]);
 
 
 //搜尋
