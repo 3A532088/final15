@@ -9,3 +9,6 @@
 - 結帳
 - 訂單資訊查詢
 ## 網站安裝
+1. > git clone https://github.com/WISD-2018/final15.git
+2. > composer install(專案還原)
+3. > 匯入資料庫
